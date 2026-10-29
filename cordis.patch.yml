@@ -1,0 +1,5 @@
+# dsh-netqos — DSH bundle patch
+# 设置页入口：设置 → 网速守卫
+- insert:
+    - id: dsh-netqos
+      name: dsh-netqos
