@@ -1,0 +1,27 @@
+{
+  "name": "dsh-netqos",
+  "version": "0.1.0",
+  "description": "打游戏时给监听端让带宽：白名单软件一开，就用 Windows QoS 给 Coopanion / SnowLuma / DSH 限速或几乎断开。DSH 设置页可视化配置。",
+  "keywords": ["dsh", "dsh-plugin", "deepseek-harness", "qos", "bandwidth", "限速", "游戏"],
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "scripts",
+    "cordis.patch.yml",
+    "helper.ps1",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": { "inject": [], "platform": "web" }
+  },
+  "os": ["win32"],
+  "license": "MIT"
+}
